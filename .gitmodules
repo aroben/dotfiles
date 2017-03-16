@@ -25,9 +25,6 @@
 [submodule "vim/vim.symlink/bundle/vim-json"]
 	path = vim/vim.symlink/bundle/vim-json
 	url = https://github.com/leshill/vim-json.git
-[submodule "vim/vim.symlink/bundle/vim-literate-coffeescript"]
-	path = vim/vim.symlink/bundle/vim-literate-coffeescript
-	url = https://github.com/mintplant/vim-literate-coffeescript
 [submodule "vim/vim.symlink/bundle/vim-markdown"]
 	path = vim/vim.symlink/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown
