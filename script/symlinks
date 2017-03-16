@@ -44,6 +44,10 @@ install_dotfiles () {
 
     if [ -f $dest ] || [ -d $dest ]
     then
+      if [ "$(readlink $dest)" == "$source" ]
+      then
+        continue
+      fi
 
       overwrite=false
       backup=false
