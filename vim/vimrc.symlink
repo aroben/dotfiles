@@ -1,0 +1,93 @@
+call pathogen#infect()
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+filetype plugin indent on
+syntax on
+
+set hlsearch incsearch
+set number laststatus=2 ruler
+colorscheme desert
+set grepprg=git\ grep\ -E\ -n
+set expandtab tabstop=8 shiftwidth=2
+set backspace=indent,eol,start
+
+set wildmode=longest,full
+set wildmenu
+
+set undofile
+set undodir=$HOME/.vim/undo
+
+set undolevels=1000
+set undoreload=10000
+
+let g:vim_markdown_folding_disabled = 1
+
+" <https://wiki.archlinux.org/index.php/Vim#Make_Vim_restore_cursor_position_in_files>
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+
+function! GetJasmineFold(lnum)
+  if getline(a:lnum) =~? '\v\s*describe [''"]'
+    return '0'
+  else
+    return '1'
+  endif
+endfunction
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+
+" let g:syntastic_debug = 33
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
+
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+
+call system("command -v safe-ruby-quick")
+if v:shell_error
+  let g:syntastic_ruby_mri_exec = 'ruby'
+else
+  let g:syntastic_ruby_mri_exec = 'safe-ruby-quick'
+endif
+
+"let g:syntastic_scss_checkers = ['scss_lint']
+"let g:syntastic_scss_scss_lint_args = '--config app/assets/stylesheets/.scss-lint.yml'
+
+" BufRead seems more appropriate here but for some reason the final `wincmd p` doesn't work if we do that.
+autocmd VimEnter COMMIT_EDITMSG call OpenCommitMessageDiff()
+function OpenCommitMessageDiff()
+  " Save the contents of the z register
+  let old_z = getreg("z")
+  let old_z_type = getregtype("z")
+
+  try
+    call cursor(1, 0)
+    let diff_start = search("^diff --git")
+    if diff_start == 0
+      " There's no diff in the commit message; generate our own.
+      let @z = system("git diff --cached -M -C")
+    else
+      " Yank diff from the bottom of the commit message into the z register
+      :.,$yank z
+      call cursor(1, 0)
+    endif
+
+    " Paste into a new buffer
+    vnew
+    normal! V"zP
+  finally
+    " Restore the z register
+    call setreg("z", old_z, old_z_type)
+  endtry
+
+  " Configure the buffer
+  set filetype=diff noswapfile nomodified readonly
+  silent file [Changes\ to\ be\ committed]
+
+  " Get back to the commit message
+  wincmd p
+endfunction

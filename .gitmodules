@@ -1,0 +1,39 @@
+[submodule "vim/vim.symlink/bundle/bats.vim"]
+	path = vim/vim.symlink/bundle/bats.vim
+	url = https://github.com/vim-scripts/bats.vim
+[submodule "vim/vim.symlink/bundle/ctrlp.vim"]
+	path = vim/vim.symlink/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "vim/vim.symlink/bundle/gyp.vim"]
+	path = vim/vim.symlink/bundle/gyp.vim
+	url = https://github.com/kelan/gyp.vim
+[submodule "vim/vim.symlink/bundle/mustache.vim"]
+	path = vim/vim.symlink/bundle/mustache.vim
+	url = https://github.com/juvenn/mustache.vim.git
+[submodule "vim/vim.symlink/bundle/syntastic"]
+	path = vim/vim.symlink/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "vim/vim.symlink/bundle/vim-coffee-script"]
+	path = vim/vim.symlink/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/vim.symlink/bundle/vim-fugitive"]
+	path = vim/vim.symlink/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "vim/vim.symlink/bundle/vim-golang"]
+	path = vim/vim.symlink/bundle/vim-golang
+	url = https://github.com/jnwhiteh/vim-golang
+[submodule "vim/vim.symlink/bundle/vim-json"]
+	path = vim/vim.symlink/bundle/vim-json
+	url = https://github.com/leshill/vim-json.git
+[submodule "vim/vim.symlink/bundle/vim-literate-coffeescript"]
+	path = vim/vim.symlink/bundle/vim-literate-coffeescript
+	url = https://github.com/mintplant/vim-literate-coffeescript
+[submodule "vim/vim.symlink/bundle/vim-markdown"]
+	path = vim/vim.symlink/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown
+[submodule "vim/vim.symlink/bundle/vim-ps1"]
+	path = vim/vim.symlink/bundle/vim-ps1
+	url = http://github.com/PProvost/vim-ps1
+[submodule "vim/vim.symlink/bundle/vim-puppet"]
+	path = vim/vim.symlink/bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet
