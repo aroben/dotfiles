@@ -3,6 +3,7 @@ if command -v brew >/dev/null && [ -f $(brew --prefix)/etc/bash_completion ]; th
 fi
 
 export PATH=$PATH:~/.dotfiles/bin
+export EDITOR=/usr/bin/vim
 
 for file in ~/.dotfiles/*/*.bash; do
   source $file
