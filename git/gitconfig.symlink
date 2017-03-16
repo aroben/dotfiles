@@ -1,0 +1,29 @@
+[user]
+	name = Adam Roben
+	email = adam@roben.org
+	username = aroben
+	useconfigonly = true
+[color]
+	ui = auto
+[gui]
+	fontdiff = -family Menlo -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+
+[push]
+	default = current
+[hub]
+	protocol = https
+[alias]
+	k = "!f() { gitk \"$@\" >/dev/null 2>&1 & }; f"
+	gblame = "!f() { git gui blame \"$@\" >/dev/null 2>&1 & }; f"
+	ctags = !.git/hooks/ctags
+[credential]
+	helper = osxkeychain
+[github]
+	user = aroben
+[init]
+	templatedir = ~/.git_template
+[commit]
+	verbose = true
