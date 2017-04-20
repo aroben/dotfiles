@@ -12,3 +12,5 @@ done
 alias ls='ls -G'
 
 export GEM_HOME=~/.gems
+
+test -f ~/.secrets && source ~/.secrets
