@@ -2,7 +2,7 @@ if command -v brew >/dev/null && [ -f $(brew --prefix)/etc/bash_completion ]; th
   . $(brew --prefix)/etc/bash_completion
 fi
 
-export PATH=~/bin:~/.dotfiles/bin:$PATH
+export PATH=~/bin:~/.dotfiles/bin:~/.gems/bin:$PATH
 export EDITOR=/usr/bin/vim
 
 for file in ~/.dotfiles/*/*.bash; do
@@ -10,3 +10,5 @@ for file in ~/.dotfiles/*/*.bash; do
 done
 
 alias ls='ls -G'
+
+export GEM_HOME=~/.gems
