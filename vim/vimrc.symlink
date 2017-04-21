@@ -4,6 +4,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 filetype plugin indent on
 syntax on
 
+set directory=~/.vimswap
+
 set hlsearch incsearch
 set number laststatus=2 ruler
 colorscheme desert
