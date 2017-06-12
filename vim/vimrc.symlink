@@ -23,6 +23,8 @@ set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undoreload=10000
 
+let g:netrw_browsex_viewer = "open"
+
 let g:vim_markdown_folding_disabled = 1
 
 " <https://wiki.archlinux.org/index.php/Vim#Make_Vim_restore_cursor_position_in_files>
