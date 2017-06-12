@@ -37,3 +37,6 @@
 [submodule "vim/vim.symlink/bundle/fugitive-gitlab.vim"]
 	path = vim/vim.symlink/bundle/fugitive-gitlab.vim
 	url = https://github.com/shumphrey/fugitive-gitlab.vim
+[submodule "vim/vim-pathogen"]
+	path = vim/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
