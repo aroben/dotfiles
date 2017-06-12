@@ -8,6 +8,7 @@ set directory=~/.vimswap
 
 set hlsearch incsearch
 set number laststatus=2 ruler
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 colorscheme desert
 set grepprg=git\ grep\ -E\ -n
 set expandtab tabstop=8 shiftwidth=2
