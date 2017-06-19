@@ -12,5 +12,6 @@ for file in ~/.dotfiles/*/*.bash; do
 done
 
 alias ls='ls -G'
+alias grep='grep --color=auto'
 
 test -f ~/.secrets && source ~/.secrets
