@@ -1,5 +1,17 @@
-if command -v brew >/dev/null && [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+safe_source() {
+  test -f "$1" && . $1
+}
+
+if command -v brew >/dev/null; then
+  safe_source $(brew --prefix)/etc/bash_completion
+fi
+
+if command -v xcode-select >/dev/null; then
+  safe_source $(xcode-select -p)/usr/share/git-core/git-completion.bash
+  safe_source $(xcode-select -p)/usr/share/git-core/git-prompt.sh
+else
+  safe_source ~/.dotfiles/git/git-completion.bash.fallback
+  safe_source ~/.dotfiles/git/git-prompt.sh.fallback
 fi
 
 export GEM_HOME=~/.gems
