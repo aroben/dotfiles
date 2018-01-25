@@ -5,6 +5,7 @@
 set -e
 
 cd "$(dirname "$0")/.."
+cd "$(pwd -P)"
 
 Echo "Bootstrapping"
 
