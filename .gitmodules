@@ -43,3 +43,21 @@
 [submodule "vim/vim.symlink/bundle/vim-rhubarb"]
 	path = vim/vim.symlink/bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
+[submodule "pyenv/pyenv.symlink"]
+	path = pyenv/pyenv.symlink
+	url = https://github.com/pyenv/pyenv
+[submodule "pyenv/plugins/pyenv-doctor"]
+	path = pyenv/plugins/pyenv-doctor
+	url = https://github.com/pyenv/pyenv-doctor
+[submodule "pyenv/plugins/pyenv-installer"]
+	path = pyenv/plugins/pyenv-installer
+	url = https://github.com/pyenv/pyenv-installer
+[submodule "pyenv/plugins/pyenv-update"]
+	path = pyenv/plugins/pyenv-update
+	url = https://github.com/pyenv/pyenv-update
+[submodule "pyenv/plugins/pyenv-virtualenv"]
+	path = pyenv/plugins/pyenv-virtualenv
+	url = https://github.com/pyenv/pyenv-virtualenv
+[submodule "pyenv/plugins/pyenv-which-ext"]
+	path = pyenv/plugins/pyenv-which-ext
+	url = https://github.com/pyenv/pyenv-which-ext
