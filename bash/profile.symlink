@@ -27,3 +27,5 @@ alias ls='ls -G'
 alias grep='grep --color=auto'
 
 test -f ~/.secrets && source ~/.secrets
+
+export PYENV_VERSION=system:3.6.5
