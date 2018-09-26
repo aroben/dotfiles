@@ -64,6 +64,3 @@
 [submodule "xcode/Tokyo"]
 	path = xcode/Tokyo
 	url = https://github.com/cseanc/Tokyo
-[submodule "homebrew/brew"]
-	path = homebrew/brew
-	url = https://github.com/homebrew/brew
